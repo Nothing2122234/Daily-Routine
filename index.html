@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Routine Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2 id="auto-text"></h2>
+    
+    <div class="task">
+        <label for="jogging">Jogging<span style=" display:block; font-size:9px; color:#999;">Must try weak up at 06:20 Fresh your self <span style=" display:block;">and before goto jogging at 06:50 comeback 07:20</span></label>
+        <input type="checkbox" id="jogging">
+    </div>
+    <div class="task">
+        <label for="school">Break fast<span style=" display:block; font-size:9px; color:#999;"> try to Finesh in 30 min 07:20 </span></label>
+        <input type="checkbox" id="school">
+    </div>
+    <div class="task">
+        <label for="asr">Changing <span style="border:2px solid #ccc">👔</span> Uniform <span style=" display:block; font-size:9px; color:#999;">Ready after breakfast </span></label>
+        <input type="checkbox" id="asr">
+    </div>
+    <div class="task">
+        <label for="maghrib">Going to  <span style="color:orange;"> School<span style=" display:block; font-size:9px; color:#999;">07:40/07:50 comback 01:50</span></span></label>
+        <input type="checkbox" id="maghrib">
+    </div>
+    <div class="task">
+        <label for="isha">Lunch <span style=" display:block; font-size:9px; color:#999;">-------</span></label>
+        <input type="checkbox" id="isha">
+    </div>
+       <div class="task">
+        <label for="sha">Changing/sleep<span style=" display:block; font-size:9px; color:#999;">In 1 hour you can do every think what you want</span></label>
+        <input type="checkbox" id="sha">
+    </div>
+    
+    
+    
+<div class="task">
+        <label for="gym">Boxing Class 🥊<span style=" display:block; font-size:9px; color:#999;">At 02:45 Ready your self</span></label>
+        <input type="checkbox" id="gym">
+    </div>
+    
+    <div class="task">
+        <label for="enj">Boxing Class 🥊<span style=" display:block; font-size:9px; color:#999;">07:30 Then perform all the prayers  and enjoy <span style=" display:block;">chilling turned do everything whatever you wantt 😎</span></label>
+        <input type="checkbox" id="enj">
+    </div>
+    
+    
+    <button onclick="openConfirmationPopup()">Save Routine</button>
+
+    <!-- Custom Popup -->
+    <div id="confirmationPopup" class="popup">
+        <p>Do you want to save?</p>
+        <button class="popup-btn yes-btn" onclick="saveRoutine(); closePopup()">Yes</button>
+        <button class="popup-btn no-btn" onclick="closePopup()">No</button>
+    </div>
+
+   <p id="showSavedTasks" style="cursor: pointer; color: lime; text-decoration: underline;" onclick="toggleSavedTasks()">Show Saved Tasks</p>
+<!-- Saved Tasks Container (Hidden by Default) -->
+<div id="savedTasksContainer" class="saved-tasks-container" style="display: none;">
+    <h3>Saved Tasks</h3>
+    <ul id="savedTasksList"></ul>
+</div>
+
+
+
+<!-- ✅ Stylish PIN Confirmation Popup -->
+<div id="pinPopup">
+    <p>Enter PIN to delete:</p>
+    <input type="password" id="pinInput" placeholder="Enter 6-digit PIN">
+    
+    <div id="pinButtons">
+        <button class="pin-btn pin-confirm" onclick="confirmDelete()">Confirm</button>
+        <button class="pin-btn pin-cancel" onclick="closePinPopup()">Cancel</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
